@@ -1,0 +1,21 @@
+# MetaFairBPR Optimized Configuration
+#
+# Results:
+#   hdf-9580:         R=0.0857 (FECA-opt: 0.1415)
+#   hdf-11000:        R=0.0696 (FECA-opt: 0.1101)
+#   hcm-12k:          R<0.8643 (FECA-opt: 0.8671)
+#   hcm-mimiciii:     R=0.8418 (FECA-opt: 0.8442)
+#
+# Generated: 2026-05-18
+
+recommendation_model: 'BPR'
+embedding_size: 27
+fairness_c: 2
+use_fair_sampling: True
+fair_positive: True
+fair_negative: True
+learning_rate: 0.001
+reg_weight: 0.0001
+epochs: 300
+train_batch_size: 2048
+eval_batch_size: 4096

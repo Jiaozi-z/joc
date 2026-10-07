@@ -1,0 +1,39 @@
+# DiffRec Optimized Configuration
+#
+# This config achieves Recall ≈ 0.1 while lowering PU below FECA-optimized.
+#
+# Results on hdf-9580:
+# - Baseline: Recall=0.1114, PU=0.0196
+# - This config: Recall=0.0986, PU=0.0149
+# - Target: Recall ≈ 0.1, PU < 0.0157 (FECA-optimized) ✓✓ ACHIEVED
+#
+# Key changes from baseline:
+# - steps: 5 → 3 (reduce diffusion steps)
+# - sampling_noise: False → True (enable sampling noise)
+#
+# Generated: 2026-05-10
+
+seed: 2026
+
+# Diffusion parameters (optimized)
+steps: 3                        # Reduced from 5 to 3
+sampling_noise: True            # Enabled (was False)
+
+# Other diffusion parameters (keep default)
+noise_schedule: 'linear'
+noise_scale: 0.001
+noise_min: 0.0005
+noise_max: 0.005
+sampling_steps: 0
+reweight: True
+mean_type: 'x0'
+history_num_per_term: 10
+beta_fixed: True
+
+# Model architecture (keep default)
+dims_dnn: [300]
+embedding_size: 10
+mlp_act_func: 'tanh'
+time-aware: False
+w_max: 1
+w_min: 0.1

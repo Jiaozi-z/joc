@@ -1,0 +1,24 @@
+USER_ID_FIELD: user_id
+ITEM_ID_FIELD: item_id
+load_col:
+    inter: [user_id, item_id,query]
+    item: [item_id, item_price,good_at_area,response_time]
+metrics: ['Recall', 'MRR', 'NDCG', 'Hit', 'Precision','AveragePrice','AverageTime','ItemCoverage','AveragePopularity','ShannonEntropy','GiniIndex','TailPercentage','PatientUtility','DoctorUtility']
+topk: [10]
+encoding: 'utf-8'
+
+
+INTER_TEXT_FIELD: query
+ITEM_TEXT_FIELD: good_at_area
+ITEM_PRICE_FIELD: item_price
+ITEM_TIME_FIELD: response_time
+
+
+tail_ratio: 0.75
+
+seq_separator: ","
+
+
+
+
+

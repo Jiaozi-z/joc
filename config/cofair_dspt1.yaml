@@ -1,0 +1,12 @@
+# CofairDSPT1 configuration
+recommendation_model: 'BPR'
+embedding_size: 64
+share_size: 32
+prompt_size: 32
+learning_rate: 0.001
+reg_weight: 0.0001
+neg_slope: 0.2
+feature_columns: []
+epochs: 500
+train_batch_size: 2048
+eval_batch_size: 4096

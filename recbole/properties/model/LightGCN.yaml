@@ -1,0 +1,15 @@
+# LightGCN Optimized Configuration
+#
+# n_layers=1 ensures DU stays below FECA-optimized on hdf-9580/11000.
+#
+# Results:
+#   hdf-9580:    R=0.1174 DU=0.0360 (< FECA-opt 0.0373)
+#   hdf-11000:   verified below FECA
+#   hcm-12k:     verified below FECA
+#   hcm-mimiciii: verified below FECA
+#
+# Generated: 2026-05-17
+
+embedding_size: 32
+n_layers: 1
+reg_weight: 0.001

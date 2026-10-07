@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# 运行时产物
+log/
+log_tensorboard/
+saved/
+FECA_recommendation_result/
+
+# 临时配置（调参过程中 process substitution 产生）
+tmp*.yaml
+
+# 实验过程产物（最终报告已保留在 feca_results/）
+feca_results/grid_search_log.txt
+feca_results/grid_search_results.json
+feca_results/ablation_results_log*.txt
+feca_results/ablation_explore/
+
+# IDE / 系统
+.vscode/
+.idea/
+.DS_Store

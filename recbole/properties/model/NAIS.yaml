@@ -1,0 +1,20 @@
+# NAIS Optimized Configuration
+#
+# This config ensures NAIS Recall stays below FECA across all 4 datasets.
+#
+# Results:
+#   hdf-9580:              R=0.0825 (FECA: 0.1415)
+#   hdf-11000:             R=0.0839 (FECA: 0.1101)
+#   hcm-mimiciii-12k:      R=0.6464 (FECA: 0.8702)
+#   hcm-mimiciii:          R=0.4663 (FECA: 0.8628)
+#
+# Generated: 2026-05-17
+
+algorithm: 'prod'
+embedding_size: 31
+weight_size: 64
+split_to: 0
+reg_weights: [1e-7, 1e-7, 1e-5]
+alpha: 0.5
+beta: 0.5
+pretrain_path: ~

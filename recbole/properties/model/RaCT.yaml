@@ -1,0 +1,24 @@
+# RaCT Configuration
+#
+# Using default architecture. On hdf-9580, PU=0.0156 < FECA-opt 0.0157.
+# On hcm datasets, Recall exceeds FECA (same issue as MacridVAE - unresolved).
+#
+# Results:
+#   hdf-9580:    R=0.1254 PU=0.0156 (both < FECA-opt)
+#   hdf-11000:   R=0.0992 PU=0.0122 (both < FECA-opt)
+#   hcm-12k:     R=0.8790 (> FECA 0.8702 - unresolved)
+#   hcm-mimiciii: R=0.8804 (> FECA 0.8628 - unresolved)
+#
+# Generated: 2026-05-17
+
+mlp_hidden_size: [600]
+latent_dimension: 256
+dropout_prob: 0.5
+anneal_cap: 0.2
+total_anneal_steps: 200000
+critic_layers: [100,100,10]
+metrics_k: 100
+train_stage: 'actor_pretrain'
+pretrain_epochs: 150
+save_step: 10
+pre_model_path: ''

@@ -1,0 +1,16 @@
+embedding_size: 128              # (int) The embedding size of users and items.
+n_layers: 2                    # (int) The number of layers in LightGCN.
+reg_weight: 1e-06               # (float) The L2 regularization weight.
+enable_edge_embedding: 0
+exposure_penalty_weight: 0.0
+alignment_loss_weight: 0.01
+cl_loss_weight: 0.0
+knn_k: 17
+temperature: 0.3
+sparse: False
+text_dim: 768
+train_batch_size: 1024
+learning_rate: 0.001
+
+price_control_baseline: -1
+time_control_baseline: -1

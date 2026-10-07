@@ -1,0 +1,14 @@
+torch==2.4.0
+numpy==1.26.4
+pandas==3.0.1
+scipy==1.17.1
+scikit-learn==1.8.0
+PyYAML==6.0.3
+tqdm==4.67.3
+colorama==0.4.4
+colorlog==4.7.2
+texttable==1.7.0
+tensorboard==2.20.0
+torch-geometric==2.7.0
+# torch-sparse 需与 torch/CUDA 版本匹配，参考 https://github.com/rusty1s/pytorch_sparse
+torch-sparse==0.6.18

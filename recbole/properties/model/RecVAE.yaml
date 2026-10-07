@@ -1,0 +1,18 @@
+# RecVAE Optimized Configuration
+#
+# Results:
+#   hdf-9580:         R=0.1168 (FECA-opt: 0.1415)
+#   hdf-11000:        R=0.1057 (FECA-opt: 0.1101)
+#   hcm-12k:          R=0.8312 (FECA-opt: 0.8671)
+#   hcm-mimiciii:     R=0.8332 (FECA-opt: 0.8442)
+#
+# Generated: 2026-05-18
+
+hidden_dimension: 200
+latent_dimension: 24
+dropout_prob: 0.9
+beta: 0.2
+gamma: 0.005
+mixture_weights: [0.15, 0.75, 0.1]
+n_enc_epochs: 3
+n_dec_epochs: 1

@@ -1,0 +1,39 @@
+# FECA Optimized Configuration
+#
+# Best configuration found via parameter search.
+# cl_loss_weight=0.0001 enables contrastive learning (text features active).
+# alignment_loss_weight=0.03 enables doctor exposure alignment.
+#
+# Results (vs previous cl=0, align=0.015):
+#   hdf-9580:    R=0.1439(+1.7%) NDCG=0.0790(+1.3%)
+#   hdf-11000:   R=0.1130(+2.6%) NDCG=0.0614(+6.0%)
+#   hcm-12k:     R=0.8666(≈)     NDCG=0.8508(≈)
+#   hcm-mimiciii: R=0.8436(≈)    NDCG=0.8215(≈)
+#
+# Updated: 2026-05-18
+
+seed: 2026
+
+# Model architecture
+embedding_size: 128
+n_layers: 2
+reg_weight: 3.0e-06
+
+# Training
+train_batch_size: 1024
+learning_rate: 0.001
+
+# Graph construction
+knn_k: 17
+temperature: 0.3
+
+# Loss components
+alignment_loss_weight: 0.03
+cl_loss_weight: 0.0001
+enable_edge_embedding: 0
+exposure_penalty_weight: 0.0
+
+# PatientUtility optimization (inference-time adjustment)
+enable_pu_score_adjustment: True
+pu_score_weight: 0.04
+pu_penalty_mode: time_only

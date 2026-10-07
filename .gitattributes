@@ -1,0 +1,7 @@
+# 大数据集文件通过 Git LFS 管理（单文件 >100MB，GitHub/Gitee 普通推送会被拒绝）
+dataset/**/*.inter filter=lfs diff=lfs merge=lfs -text
+dataset/**/*.item  filter=lfs diff=lfs merge=lfs -text
+dataset/**/*.user  filter=lfs diff=lfs merge=lfs -text
+
+# 模型权重（若以后纳入版本库）
+*.pth filter=lfs diff=lfs merge=lfs -text
